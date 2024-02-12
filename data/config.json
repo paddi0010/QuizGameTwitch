@@ -1,9 +1,9 @@
 {
-    "channels" : ["paddi001"],
+    "channels" : ["JOINDED_CHANNELS"],
 
     "identify": {
-		"username": "paddiassistant",
-		"password": "oauth:mf8vh6oic8p04u79ac7bny9s10bucv"
+		"username": "BOT_USERNAME",
+		"password": "OAUTH_BOT_TOKEN"
 
 	}
 }
