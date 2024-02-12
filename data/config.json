@@ -1,0 +1,9 @@
+{
+    "channels" : ["paddi001"],
+
+    "identify": {
+		"username": "paddiassistant",
+		"password": "oauth:mf8vh6oic8p04u79ac7bny9s10bucv"
+
+	}
+}
