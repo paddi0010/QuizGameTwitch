@@ -1,5 +1,24 @@
 [
-    { "question": "Was ist die Hauptstadt von Frankreich?", "answer": "Paris" },
-    { "question": "Wie viele Planeten hat unser Sonnensystem?", "answer": "8" }
+    { "question": "Was ist die Hauptstadt von Frankreich? 🏙️", "answer": "Paris" },
+    { "question": "Wie viele Planeten hat unser Sonnensystem? 🪐", "answer": "8" },
+    { "question": "Wer malte die Mona Lisa? 🖌️", "answer": "Leonardo da Vinci" },
+    { "question": "Was ist die chemische Formel für Wasser? 🧪", "answer": "H2O" },
+    { "question": "Wie viele Minuten hat eine Stunde? ⏰", "answer": "60" },
+    { "question": "Wie viele Seiten hat ein Dreieck? 📐", "answer": "3" },
+    { "question": "Wie viele Beine hat eine Spinne? 🕷️", "answer": "8" },
+    { "question": "Wie viele Bundesländer hat Deutschland? 📍", "answer": "16" },
+    { "question": "Welches Tier ist das größte auf der Erde? 🦣", "answer": "Blauwal" },
+    { "question": "Was ist die Hauptzutat für Sushi-Rollen? 🍣", "answer": "Reis" },
+    { "question": "In welchem Jahr wurde das Spiel 'Super Mario Bros.' erstmals veröffentlicht? 🎮", "answer": "1985" },
+    { "question": "Was ist der Hauptcharakter aus den Videospiel 'The Legend of Zelda'? 👤", "answer": "Link" },
+    { "question": "Welches ist das meistverkaufte Videospiel aller Zeiten? 🕹️", "answer": "Minecraft" },
+    { "question": "Welches Unternehmen entwickelt und verkauft die 'Playstation'? 💻", "answer": "Sony" },
+    { "question": "[DbD] Wie viele Survivor müssen entkommen, um bei den Spiel zu gewinnen? 👥", "answer": "1" },
+    { "question": "[DbD] Welche Survivor sind bei den Spiel dafür bekannt, Geräusche zu unterdrücken? 🔈 (Vorname)", "answer": "Claudette" },
+    { "question": "[DbD] Welcher Killer ist bei den Spiel dafür bekannt, dass er eine Kettensäge verwendet? 🪚 (Antwort auf Englisch)", "answer": "Leatherface" },
+    { "question": "[DbD] Welcher Killer verfügt über eine Fähigkeit, die es ihm ermöglicht, durch Wände zu sehen? 👀 (Antwort auf Englisch)", "answer": "Doctor" },
+    { "question": "[DbD] Welcher Killer kann Überlebende markieren und dann einen mächtigen Angriff ausführen? (Antwort auf Englisch)", "answer": "Plague" },
+    { "question": "[DbD] Welcher Survivor hat eine erhöhte Ausdauer? (nur Vorname)", "answer": "Feng" },
+    { "question": "[DbD] Welcher Überlebende hat eine Fähigkeit, die es ihm ermöglicht, still zu atmen und nicht entdeckt zu werden? (nur Vorname)", "answer": "Jake" }
     
 ]
