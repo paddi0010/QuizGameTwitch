@@ -1,5 +1,5 @@
 const tmi = require("tmi.js");
-const config = require("./data/config.json");
+const config = require("./data/secret_data/config.json");
 const fs = require('fs');
 
 const client = new tmi.Client({
@@ -11,9 +11,8 @@ const client = new tmi.Client({
       secure: true,
     },
     identity: config.identify,
-  
     channels: config.channels,
-  });
+});
 
 
 let gameStarted = false;
@@ -26,32 +25,44 @@ client.on('message', (channel, tags, message, self) => {
     if (self) return; 
     const command = message.split(" ")[0]; 
     if (command === "!start") {
-        if (!gameStarted) {
-            gameStarted = true;
-            loadQuestions();
-            sendQuestion(channel);
-        } else {
-            client.say(channel, "Das Spiel läuft bereits!");
-        }
-    }
-
-    if (command === "!stop") {
-        if (gameStarted) {
-            gameStarted = false;
-            client.say(channel, `Das Spiel wurde vorzeitig beendet!`);
-        } else {
-            client.say(channel, `Es läuft derzeit kein Spiel!`);
-        }
-    }
-
-    if (gameStarted && command === "!answer") {
+        startGame(channel);
+    } else if (command === "!stop") {
+        stopGame(channel);
+    } else if (gameStarted && command === "!answer") {
         const answer = message.slice("!answer".length).trim();
         checkAnswer(channel, answer, tags.username);
     }
 });
 
+function startGame(channel) {
+    if (!gameStarted) {
+        gameStarted = true;
+        loadQuestions();
+        sendQuestion(channel);
+    } else {
+        client.say(channel, "Das Spiel läuft bereits!");
+    }
+}
+
+function stopGame(channel) {
+    if (gameStarted) {
+        gameStarted = false;
+        client.say(channel, `Das Spiel wurde vorzeitig beendet!`);
+    } else {
+        client.say(channel, `Es läuft derzeit kein Spiel!`);
+    }
+}
+
 function loadQuestions() {
-    questions = JSON.parse(fs.readFileSync('questions.json', 'utf8'));
+    questions = JSON.parse(fs.readFileSync('data/questions.json', 'utf-8'));
+    shuffleArray(questions);
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
 }
 
 function sendQuestion(channel) {
@@ -82,4 +93,4 @@ function checkAnswer(channel, answer, username) {
     }
 }
 
-  client.connect().catch(console.error);
+client.connect().catch(console.error);
