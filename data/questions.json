@@ -19,6 +19,9 @@
     { "question": "[DbD] Welcher Killer verfügt über eine Fähigkeit, die es ihm ermöglicht, durch Wände zu sehen? 👀 (Antwort auf Englisch)", "answer": "Doctor" },
     { "question": "[DbD] Welcher Killer kann Überlebende markieren und dann einen mächtigen Angriff ausführen? (Antwort auf Englisch)", "answer": "Plague" },
     { "question": "[DbD] Welcher Survivor hat eine erhöhte Ausdauer? (nur Vorname)", "answer": "Feng" },
-    { "question": "[DbD] Welcher Überlebende hat eine Fähigkeit, die es ihm ermöglicht, still zu atmen und nicht entdeckt zu werden? (nur Vorname)", "answer": "Jake" }
+    { "question": "[DbD] Welcher Überlebende hat eine Fähigkeit, die es ihm ermöglicht, still zu atmen und nicht entdeckt zu werden? (nur Vorname)", "answer": "Jake" },
+    { "question": "Wer ist der Gründer von Tesla? 🚗", "answer": "Elon Musk"},
+    { "question": "Wie viele Sekunden hat eine Stunde? ⏱️", "answer": "3600"},
+    { "question": "Welcher Planet ist der nächste zur Sonne?", "answer": "Merkur"}
     
 ]
