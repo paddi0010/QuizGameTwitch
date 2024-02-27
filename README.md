@@ -31,6 +31,13 @@ Now the Twitch Game should be started!
 **For stop the Bot, you can easy close the Command Window ;)**
 
 
+| Command | Description |
+| --- | --- |
+| `!start` | Start the Quiz Game |
+| `!stop` | Stop the Quiz Game |
+| `!answer <answer>` | Give a Answer |
+
+
 # How to edit Bot Messages
 
 You can open the `game.js` File and you can see a lot of Code. If you want to change the Message, you can change it.
