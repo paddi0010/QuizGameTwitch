@@ -1,5 +1,0 @@
-//Allgemeine Commands
-
-!start - Quiz starten
-!stop - Quiz stoppen
-!answer <antwort> - Anwort geben
