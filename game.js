@@ -31,6 +31,8 @@ client.on('message', (channel, tags, message, self) => {
     } else if (gameStarted && command === "!answer") {
         const answer = message.slice("!answer".length).trim();
         checkAnswer(channel, answer, tags.username);
+    } else if (gameStarted && command === "!skipquestion" && (tags.mod || tags.username.toLowerCase() === channel.replace("#", ""))) {
+        skipQuestion(channel, tags.username);
     }
 });
 
@@ -95,6 +97,17 @@ function checkAnswer(channel, answer, username) {
                 client.say(channel, `Falsch, ${username}. Versuche es erneut! Du hast noch ${attemptsLeft} Versuche übrig.`);
             }
         }
+    }
+}
+
+function skipQuestion(channel, username) {
+
+    if (attemptsLeft > 0 ) {
+
+    currentQuestionIndex++;
+    attemptsLeft--;
+    client.say(channel, `${username} hat eine Frage übersprungen! ${attemptsLeft} Versuche zum Überspringen übrig!`);
+    sendQuestion(channel);
     }
 }
 
