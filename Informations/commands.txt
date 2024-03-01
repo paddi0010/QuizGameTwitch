@@ -1,0 +1,7 @@
+//Allgemeine Commands
+
+!start - Quiz starten
+!stop - Quiz stoppen
+!answer <antwort> - Anwort geben
+!skipquestion - Eine frage überspringen
+!currentquestion - Aktuelle frage erneut anzeigen lassen
