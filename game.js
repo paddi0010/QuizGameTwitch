@@ -74,6 +74,11 @@ function sendQuestion(channel) {
 }
 
 function checkAnswer(channel, answer, username) {
+    if (!answer.trim()) {
+        client.say(channel, `Bitte gib eine Antwort ein, ${username}!`);
+        return;
+    }
+
     if (currentQuestionIndex < questions.length && attemptsLeft > 0) {
         const correctAnswer = questions[currentQuestionIndex].answer.toLowerCase();
         if (answer.toLowerCase() === correctAnswer) {
