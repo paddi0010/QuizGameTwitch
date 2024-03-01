@@ -1,0 +1,10 @@
+## Patch Notes
+
+- Es wurde eine Abfrage beim !answer command eingefügt, diese fragt ab, ob eine Antwort eingegeben wurde, 
+wenn nicht wird mit einer Fehlermeldung drauf hingewiesen.
+
+- Es wurde ein !skipquestion command eingefügt, mit den Fragen übersprungen werden können, dies können nur Moderatoren 
+und der Broadcaster selbst machen.
+
+- Es wurde ein !currentquestion command eingefügt, mit den man fragen erneut anzeigen lassen kann.
+
