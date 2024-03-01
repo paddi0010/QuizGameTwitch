@@ -33,6 +33,8 @@ client.on('message', (channel, tags, message, self) => {
         checkAnswer(channel, answer, tags.username);
     } else if (gameStarted && command === "!skipquestion" && (tags.mod || tags.username.toLowerCase() === channel.replace("#", ""))) {
         skipQuestion(channel, tags.username);
+    } else if (gameStarted && command === "!currentquestion") {
+        sendCurrentQuestion(channel);
     }
 });
 
@@ -101,13 +103,22 @@ function checkAnswer(channel, answer, username) {
 }
 
 function skipQuestion(channel, username) {
-
     if (attemptsLeft > 0 ) {
-
+        
     currentQuestionIndex++;
     attemptsLeft--;
     client.say(channel, `${username} hat eine Frage übersprungen! ${attemptsLeft} Versuche zum Überspringen übrig!`);
     sendQuestion(channel);
+    } else {
+        client.say(channel, `Du hast bereits alle Versuche für das Überspringen von Fragen aufgebraucht || ${username} ||`)
+    }
+}
+
+function sendCurrentQuestion(channel) {
+    if (currentQuestionIndex < questions.length) {
+        client.say(channel, `Aktuelle Frage: ${questions[currentQuestionIndex].question} `);
+    } else {
+        client.say(channel, "Es gibt keine aktuelle Frage.");
     }
 }
 
