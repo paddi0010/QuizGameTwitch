@@ -14,7 +14,7 @@ const client = new tmi.Client({
     channels: config.channels,
 });
 
-
+//Variables
 let gameStarted = false;
 let questions = [];
 let currentQuestionIndex = 0;
@@ -104,7 +104,7 @@ function checkAnswer(channel, answer, username) {
 
 function skipQuestion(channel, username) {
     if (attemptsLeft > 0 ) {
-        
+
     currentQuestionIndex++;
     attemptsLeft--;
     client.say(channel, `${username} hat eine Frage übersprungen! ${attemptsLeft} Versuche zum Überspringen übrig!`);
